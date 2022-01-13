@@ -13,7 +13,7 @@ import re
 def inf(dataframe):
 
     target = "http://example.com"
-
+    global __dataframe__
     def convert_size(size_bytes):
         if size_bytes==0:
             return "0B"
