@@ -1,2 +1,7 @@
 *.csv
 staging.*
+build/
+dist/
+infolib.egg-info/
+*.pypirc
+.ipynb_checkpoints/
