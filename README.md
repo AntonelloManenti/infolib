@@ -6,3 +6,4 @@ Tired of .info .describe .shape .columns .dtype?
 All-in-one for overview!
 
 Work in progess.
+https://test.pypi.org/project/infolib/
