@@ -11,5 +11,7 @@ from infolib import inf
 
 inf(PandasDataFrame)
 
+Demo: https://colab.research.google.com/drive/1KTI7CwP_E7IJod_WiD0PT31MaRBdhiki?usp=sharing
+
 Work in progess.
 https://test.pypi.org/project/infolib/
