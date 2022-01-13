@@ -111,7 +111,7 @@ def inf(dataframe): # cambiare in info
 
                 for i in dataframes.columns:
 
-                    if np.issubdtype(dataframes[i].dtype, np.number)==True:
+                    if dataframes[i].dtype.name=='int64' or dataframes[i].dtype.name=='float64':
                         Tot_desc_num['feature_name'].append(i)
 
                         a = dataframes[i].dtypes
@@ -208,7 +208,6 @@ def inf(dataframe): # cambiare in info
 
             except Exception as e:
                 print(repr(e))
-                print()
                 print(f'For more info about inf() visit {target}')
 
     return
