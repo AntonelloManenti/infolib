@@ -8,6 +8,7 @@ from itertools import chain, cycle
 import psutil
 import time
 import re
+from re import search
 
 # infolib
 def inf(dataframe): # cambiare in info
@@ -111,7 +112,8 @@ def inf(dataframe): # cambiare in info
 
                 for i in dataframes.columns:
 
-                    if dataframes[i].dtype.name=='int64' or dataframes[i].dtype.name=='float64':
+                    if search('int', dataframes[i].dtype.name) or search('float', dataframes[i].dtype.name):
+
                         Tot_desc_num['feature_name'].append(i)
 
                         a = dataframes[i].dtypes

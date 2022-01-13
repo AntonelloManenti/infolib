@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
         name="infolib",
-        version="0.1.13",
+        version="0.1.14",
         packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
         long_description=long_description,
