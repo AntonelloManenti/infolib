@@ -5,10 +5,11 @@ with open("README.md", "r") as fh:
 
 setup(
         name="infolib",
-        version="0.1.9",
+        version="0.1.3",
+        packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
-        # long_description=long_description,
-        # long_description_content_type="text/markdown",
+        long_description=long_description,
+        long_description_content_type="text/markdown",
         url="https://github.com/AntonelloManenti/infolib",
         author="Antonello Manenti",
         author_email="antonellomanenti@gmail.com",
@@ -30,8 +31,7 @@ setup(
             "Programming Language :: Python :: 3.8",
             "Programming Language :: Python :: 3.9",
             "Programming Language :: Python :: 3.10",
-            "Topic :: Scientific/Engineering"
-
+            "Topic :: Scientific/Engineering",
         ],
         install_requires=[
             "numpy",
@@ -41,6 +41,9 @@ setup(
             "psutil",
             "regex",
             ],
-
-        python_requires='>=3.7',
+        python_requires='>3.6',
+        entry_points="""
+        [console_scripts]
+        contacts=app:cli
+        """,
         )
