@@ -1,3 +1,14 @@
+import math
+import numpy as np
+import pandas as pd
+pd.set_option('display.max_rows', 999)
+pd.set_option('display.max_colwidth', None)
+from IPython.display import display_html
+from itertools import chain, cycle
+import psutil
+import time
+import re
+
 # infolib
 def inf(dataframe):
 
@@ -16,7 +27,7 @@ def inf(dataframe):
         name = [x for x in globals() if globals()[x] is dataframe][0]
         return name
 
-    def display_side_by_side(*args, titles=cycle([''])):
+    def display_side_by_side(*args, titles = cycle([''])):
         html_str = ''
         for df, title in zip(args, chain(titles, cycle(['</br>'])) ):
             html_str+='<th style="text-align:center"><td style="vertical-align:top">'
