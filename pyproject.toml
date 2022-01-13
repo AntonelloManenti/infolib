@@ -1,21 +1,3 @@
-[tool.poetry]
-name = "infolib"
-version = "0.1.3"
-description = "\u0016A small, simple and sturdy library to overview our Pandas Dataframe"
-authors = ["AntonelloManenti <antonellomanenti@gmail.com>"]
-license = "MIT"
-
-[tool.poetry.dependencies]
-numpy = "^1.22.0"
-pandas = "^1.3.5"
-ipython = "^7.31.0"
-more-itertools = "^8.12.0"
-psutil = "^5.9.0"
-regex = "^2021.11.10"
-
-[tool.poetry.dev-dependencies]
-
-
 [build-system]
 requires = ["setuptools", "wheel"]
 build-backend = "setuptools.build_meta"
