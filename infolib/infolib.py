@@ -1,8 +1,10 @@
 # infolib
-def infolib(dataframe):
+def inf(dataframe):
+
+    target = "http://example.com"
 
     def convert_size(size_bytes):
-        if size_bytes == 0:
+        if size_bytes==0:
             return "0B"
         size_name = ("B", "KB", "MB", "GB", "TB", "PB", "EB", "ZB", "YB")
         i = int(math.floor(math.log(size_bytes, 1024)))
@@ -11,21 +13,22 @@ def infolib(dataframe):
         return "%s %s" % (s, size_name[i])
 
     def get_df_name(dataframe):
-        name =[x for x in globals() if globals()[x] is dataframe][0]
+        name = [x for x in globals() if globals()[x] is dataframe][0]
         return name
 
     def display_side_by_side(*args, titles=cycle([''])):
-        html_str=''
-        for df,title in zip(args, chain(titles,cycle(['</br>'])) ):
+        html_str = ''
+        for df, title in zip(args, chain(titles, cycle(['</br>'])) ):
             html_str+='<th style="text-align:center"><td style="vertical-align:top">'
-            html_str+=f'<h5>{title}</h5>'
-            html_str+=df.to_html().replace('table','table style="display:inline"')
+            html_str+=f'<h3>{title}</h3>'
+            html_str+=df.to_html().replace('table', 'table style="display:inline"')
             html_str+='</td></th></br></br>'
         display_html(html_str, raw=True)
         return
 
     if isinstance(dataframe, pd.DataFrame)==False:
-        print(f"This function expects PandasDataframe argument.\n{type(dataframe)} is not a valid argument.\n\nTry infolib(PandasDataframe) for info about {get_df_name(dataframe)} or visit")
+        print(f"This function expects PandasDataframe argument.\n{get_df_name(dataframe)} is {type(dataframe)}. It's not a valid argument.\n\nFor more info about inf.inf() visit {target}")
+
     else:
         if dataframe.empty==True:
             display_side_by_side(dataframe, titles=[f"Warning! Your PandasDataframe is empty"])
@@ -37,10 +40,34 @@ def infolib(dataframe):
                 namedf = get_df_name(dataframe)
                 Df_desc['dataset'].append(namedf)
 
-                dataframes = dataframe.reset_index()
+                try:
+                    if not isinstance(dataframe.index, pd.MultiIndex):
 
-                if 'index' in dataframes.columns:
-                    dataframes = dataframes.drop('index', axis=1)
+                        if dataframe.index.name==None and 'index' not in dataframe.columns: # crea index ma se c'è index in un'altra colonna qualsiasi crea level_0 e se c'è già da errore
+
+                            dataframes = dataframe.reset_index()
+                            dataframes = dataframes.drop('index', axis=1)
+
+                        else:
+
+                            if dataframe.index.name=='index' or 'index' in dataframe.columns: # crea level0 e se c'è level_0 da errore
+                                dataframes = dataframe.rename(columns={'index': 'index_test'})
+                                dataframes = dataframes.reset_index()
+                                dataframes = dataframes.drop('index', axis=1)
+                                dataframes = dataframes.rename(columns={'index_test': 'index'})
+
+                            else: # non crea nulla
+                                dataframes = dataframe.reset_index()
+
+                    if isinstance(dataframe.index, pd.MultiIndex):
+                        dataframes = dataframe.reset_index()
+                        for i in dataframes.columns:
+                            if re.search(r'level_', i):
+                                dataframes.drop(i, axis=1, inplace=True)
+
+                except Exception as e:
+                    print('Probabilmente ci sono una o più colonne che si chiamano level_*. Devi cambiare il nome di quelle colonne')
+                    print(repr(e))
 
                 i = len(dataframes.columns)
                 Df_desc['columns'].append(i)
@@ -157,19 +184,19 @@ def infolib(dataframe):
                     if not Numerical_Features.empty:
                         if not Categorical_Features.empty:
                             print()
-                            display_side_by_side(DataFrames, Numerical_Features, Categorical_Features, Sample, titles=[f'Overview of {namedf}','Numeric Features', 'Other Features', f'Sample of {namedf}'])
+                            display_side_by_side(DataFrames, Numerical_Features, Categorical_Features, Sample, titles = [f'Overview of {namedf}','Numeric Features', 'Other Features', f'Sample of {namedf}'])
 
                 if not DataFrames.empty:
                     if not Numerical_Features.empty:
                         if Categorical_Features.empty:
                             print()
-                            display_side_by_side(DataFrames, Numerical_Features, Sample, titles=[f'Overview of {namedf}','Numeric Features', f'Sample of {namedf}'])
+                            display_side_by_side(DataFrames, Numerical_Features, Sample, titles = [f'Overview of {namedf}','Numeric Features', f'Sample of {namedf}'])
 
                 if not DataFrames.empty:
                     if Numerical_Features.empty:
                         if not Categorical_Features.empty:
                             print()
-                            display_side_by_side(DataFrames, Categorical_Features, Sample, titles=[f'Overview of {namedf}', 'Features', f'Sample of {namedf}'])
+                            display_side_by_side(DataFrames, Categorical_Features, Sample, titles = [f'Overview of {namedf}', 'Features', f'Sample of {namedf}'])
 
             except Exception as e:
                 print(repr(e))
