@@ -4,5 +4,3 @@ ipython
 more-itertools
 psutil
 regex
-python-math
-times
