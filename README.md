@@ -6,7 +6,9 @@ Tired of .info .describe .shape .columns .dtype?
 All-in-one for overview!
 
 pip install -i https://test.pypi.org/simple/ infolib
+
 from infolib import inf
+
 inf(PandasDataFrame)
 
 Work in progess.
