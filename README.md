@@ -3,6 +3,6 @@ A simple, robust and slim library proposal for Pandas Dataframe.
  
 Tired of .info .describe .shape .columns .dtype?
  
-All-in-one pip install infolib import infolib infolib (PandasDataframe)
+All-in-one for overview!
 
 Work in progess.
