@@ -23,10 +23,6 @@ def inf(dataframe):
         s = round(size_bytes / p, 2)
         return "%s %s" % (s, size_name[i])
 
-    def get_df_name(dataframe):
-        name = [x for x in globals() if globals()[x] is dataframe][0]
-        return name
-
     def display_side_by_side(*args, titles = cycle([''])):
         html_str = ''
         for df, title in zip(args, chain(titles, cycle(['</br>'])) ):
@@ -38,7 +34,7 @@ def inf(dataframe):
         return
 
     if isinstance(dataframe, pd.DataFrame)==False:
-        print(f"This function expects PandasDataframe argument.\n{get_df_name(dataframe)} is {type(dataframe)}. It's not a valid argument.\n\nFor more info about inf.inf() visit {target}")
+        print(f"This function expects PandasDataframe argument.\n{type(dataframe)} is not a valid argument.\n\nFor more info about inf.inf() visit {target}")
 
     else:
         if dataframe.empty==True:
@@ -48,7 +44,7 @@ def inf(dataframe):
                 Df_desc = {'dataset': [], 'columns': [], 'rows': [], 'rows_whitout_NaN': [], 'rows_whit_NaN':[], 'rows_duplicate':[],
                            'rows_unique':[], 'memory_usage':[]}
 
-                namedf = get_df_name(dataframe)
+                namedf = 'dataframe'
                 Df_desc['dataset'].append(namedf)
 
                 try:
