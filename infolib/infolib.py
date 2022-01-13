@@ -10,9 +10,9 @@ import time
 import re
 
 # infolib
-def inf(dataframe):
+def inf(dataframe): # cambiare in info
 
-    target = "http://example.com"
+    target = "https://github.com/AntonelloManenti/infolib"
 
     def convert_size(size_bytes):
         if size_bytes==0:
@@ -34,11 +34,12 @@ def inf(dataframe):
         return
 
     if isinstance(dataframe, pd.DataFrame)==False:
-        print(f"This function expects PandasDataframe argument.\n{type(dataframe)} is not a valid argument.\n\nFor more info about inf.inf() visit {target}")
+        print(f"This function expects PandasDataframe argument.\n{type(dataframe)} is not a valid argument.\n\nFor more info about inf() visit {target}")
 
     else:
         if dataframe.empty==True:
             display_side_by_side(dataframe, titles=[f"Warning! Your PandasDataframe is empty"])
+            print(f'\n\nFor more info about inf.inf() visit {target}')
         else:
             try:
                 Df_desc = {'dataset': [], 'columns': [], 'rows': [], 'rows_whitout_NaN': [], 'rows_whit_NaN':[], 'rows_duplicate':[],
@@ -73,7 +74,7 @@ def inf(dataframe):
                                 dataframes.drop(i, axis=1, inplace=True)
 
                 except Exception as e:
-                    print('Probabilmente ci sono una o più colonne che si chiamano level_*. Devi cambiare il nome di quelle colonne')
+                    print(f'Maybe there are one or more columns named level_ *. You need to change the name of those columns\n\nFor more info about inf() visit {target}')
                     print(repr(e))
 
                 i = len(dataframes.columns)
@@ -207,5 +208,7 @@ def inf(dataframe):
 
             except Exception as e:
                 print(repr(e))
+                print()
+                print(f'For more info about inf() visit {target}')
 
     return
