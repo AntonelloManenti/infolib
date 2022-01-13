@@ -5,7 +5,7 @@ with open("README.md", "r") as fh:
 
 setup(
         name="infolib",
-        version="0.1.4",
+        version="0.1.6",
         description="A small, simple and sturdy library to overview our PandasDataframe",
         # long_description=long_description,
         # long_description_content_type="text/markdown",
@@ -40,8 +40,8 @@ setup(
             "more-itertools",
             "psutil",
             "regex",
-            "python-math"
-            "times"
+            "python-math",
+            "times",
             ],
 
         python_requires='>=3.7',
