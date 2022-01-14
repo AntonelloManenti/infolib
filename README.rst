@@ -31,26 +31,28 @@ series that will be part of the dataframe
 
 `td = pd.Series([pd.Timedelta(days=i) for i in range(3)])`
 
-`i = [1,2,3]
-f = [0.123,423.231,0.002]`
+`i = [1,2,3]`
+
+`f = [0.123,423.231,0.002]`
 
 `c = ['A', 'B', 'C']`
 
 `cn = [1, 2, 3]`
 
-`b = [False, True, False]
+`b = [False, True, False]`
 
 `n = [np.nan, np.nan, np.nan]`
 
 
-import as pandas.Dtaframe
+import as pandas.Dataframe
 
 `test = pd.DataFrame({"A": s, "B": td, "C": i, "D":f, "E":c, "F":cn, "G":b, "H":n})`
 
 transformation of two features as categories
 
-`test['E'] = test_03['E'].astype('category')
-test['F'] = test_03['F'].astype('category')`
+`test['E'] = test_03['E'].astype('category')`
+
+`test['F'] = test_03['F'].astype('category')`
 
 run infolib
 
