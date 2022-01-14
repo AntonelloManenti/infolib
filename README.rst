@@ -13,10 +13,9 @@ Installation
 
 Only through pip at this time https://test.pypi.org/project/infolib/
 
+`pip install -i https://test.pypi.org/simple/ infolib`
 
-pip install -i https://test.pypi.org/simple/ infolib
-
-from infolib.infolib import inf
+`from infolib.infolib import inf`
 
 How to use
 ----------
