@@ -11,9 +11,9 @@ Installation
 
 Only through pip at this time https://test.pypi.org/project/infolib/
 
-'pip install -i https://test.pypi.org/simple/ infolib'
+'pip install -i https://test.pypi.org/simple/ infolib'_
 
-'from infolib.infolib import inf'
+'from infolib.infolib import inf_'
 
 How to use
 ----------
@@ -21,9 +21,9 @@ How to use
 Using infolib is very simple:
 
 
-'inf(pd.DataFarame)
+`inf(pd.DataFarame)
 
-inf() takes 1 positional argument and expects pandas DataFrame object'
+inf() takes 1 positional argument and expects pandas DataFrame object`
 
 Exemple
 -------
@@ -54,11 +54,17 @@ Development Status
 Read well and don't say you didn't know.
 
 ✔️ Planning
+
 ✔️ Pre-Alpha
+
 ✔️ Alpha
+
 ❌ Beta
+
 ❌ Production/Stable
+
 ❌ Mature
+
 ❌ Inactive
 
 The alpha version was tested in Colab (py 3.7) and on Jupyter (py 3.10
