@@ -11,7 +11,7 @@ else:
 
 setup(
         name="infolib",
-        version="0.1.19",
+        version="0.1.20",
         packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
         long_description=long_description,
