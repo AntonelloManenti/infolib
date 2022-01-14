@@ -35,7 +35,7 @@ b = [False, True, False]
 n = [np.nan, np.nan, np.nan]
 
 # import as pandas.Dtaframe
-test = pd.DataFrame({"A": s, "B": td, "C": i, "D":f, "E":c, "F":cn, "G":b, "H":n})
+test = pd.DataFrame({"A": s, "B": td, "C": i, "D": f, "E": c, "F": cn, "G": b, "H": n})
 
 # transformation of two features as categories
 test['E'] = test_03['E'].astype('category')
