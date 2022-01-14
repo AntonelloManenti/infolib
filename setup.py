@@ -1,14 +1,20 @@
 from setuptools import setup, find_packages
+import os
+import sys
 
-# with open("README.md", "r") as fh:
-#         long_description = fh.read()
+if sys.version_info[0] < 3:
+    with open('README.rst') as f:
+        long_description = f.read()
+else:
+    with open('README.rst', encoding='utf-8') as f:
+        long_description = f.read()
 
 setup(
         name="infolib",
-        version="0.1.15",
+        version="0.1.16",
         packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
-        # long_description=long_description,
+        long_description=long_description,
         long_description_content_type="text/markdown",
         url="https://github.com/AntonelloManenti/infolib",
         author="Antonello Manenti",

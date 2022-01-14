@@ -1,57 +1,38 @@
+=======
 infolib
 =======
 
-*simple and complete PandasDataframe’s stat overview*
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-|PyPI - Status| |Build Status| |PyPI - Downloads|
+*simple and complete PandasDataframe's stat overview*
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 Installation
-------------
+============
 
 Only through pip at this time https://test.pypi.org/project/infolib/
 
-.. code:: sh
+.. code-block:: python
 
    pip install -i https://test.pypi.org/simple/ infolib
 
-.. code:: sh
+.. code-block:: python
 
    from infolib.infolib import inf
 
 How to use
-----------
+==========
 
 Using infolib is very simple:
 
-.. code:: sh
+.. code-block:: python
 
    inf(pd.DataFarame)
 
-inf() takes 1 positional argument and expects pandas DataFrame object ##
-Development Status
-
-Read well and don’t say you didn’t know.
-
-== =================
-\  Status
-== =================
-✔️ Planning
-✔️ Pre-Alpha
-✔️ Alpha
-❌ Beta
-❌ Production/Stable
-❌ Mature
-❌ Inactive
-== =================
-
-The alpha version was tested in Colab (py 3.7) and on Jupyter (py 3.10
-on Windows)
+inf() takes 1 positional argument and expects pandas DataFrame object
 
 Exemple
 -------
 
-.. code:: sh
+.. code-block:: python
 
    # series that will be part of the dataframe
    s = pd.Series(pd.date_range("2012-1-1", periods=3, freq="D"))
@@ -70,28 +51,46 @@ Exemple
    test['E'] = test_03['E'].astype('category')
    test['F'] = test_03['F'].astype('category')
 
-.. code:: sh
+.. code-block:: python
 
    # run infolib
    inf(test)
 
-.. figure:: https://raw.githubusercontent.com/AntonelloManenti/infolib/main/tests/output_infolib.PNG
+.. image:: https://raw.githubusercontent.com/AntonelloManenti/infolib/main/tests/output_infolib.PNG
    :alt: Infolib output
 
-   Infolib output
+Development Status
+==================
+
+Read well and don't say you didn't know.
+
+== =================
+\  Status
+== =================
+✔️ Planning
+✔️ Pre-Alpha
+✔️ Alpha
+❌ Beta
+❌ Production/Stable
+❌ Mature
+❌ Inactive
+== =================
+
+The alpha version was tested in Colab (py 3.7) and on Jupyter (py 3.10
+on Windows)
 
 Demo
-^^^^
+====
 
 `Demo on Colab`_
 
 License
--------
+=======
 
 `MIT`_
 
 Contacts
---------
+========
 
 `linkedin`_
 
