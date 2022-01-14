@@ -1,6 +1,6 @@
 # infolib
 #### _simple and complete PandasDataframe's stat overview_
-[![Build Status](https://travis-ci.org/joemccann/dillinger.svg?branch=master)](https://travis-ci.org/joemccann/dillinger)
+![PyPI - Status](https://img.shields.io/pypi/status/infolib) ![Build Status](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) ![PyPI - Downloads](https://img.shields.io/pypi/dm/infolib?color=green)
 
 ## Installation
 
@@ -33,10 +33,23 @@ Read well and don't say you didn't know.
 | ❌ |Production/Stable |
 |❌|Mature|
 |❌|Inactive|
-
 The alpha version was tested in Colab (py 3.7)
 and on Jupyter (py 3.10 on Windows)
 
+
+## Exemple
+
+```sh
+node app
+```
+
+```sh
+gulp watch
+```
+
+```sh
+karma test
+```
 
 #### Demo
 [Demo on Colab]
