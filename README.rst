@@ -1,12 +1,7 @@
 infolib
 =======
 
-|| Python >=3.7 ||
-
 *simple and complete PandasDataframe's stat overview*
-
-
-
 
 Installation
 ------------
@@ -23,14 +18,14 @@ How to use
 Using infolib is very simple:
 
 
-inf(pd.DataFarame)
+`inf(pd.DataFarame)`
 
 inf() takes 1 positional argument and expects pandas DataFrame object
 
 Exemple
 -------
 
-series that will be part of the dataframe
+`series that will be part of the dataframe
 
 s = pd.Series(pd.date_range("2012-1-1", periods=3, freq="D"))
 
@@ -46,22 +41,22 @@ cn = [1, 2, 3]
 
 b = [False, True, False]
 
-n = [np.nan, np.nan, np.nan]''
+n = [np.nan, np.nan, np.nan]`
 
 
 import as pandas.Dtaframe
 
-test = pd.DataFrame({"A": s, "B": td, "C": i, "D":f, "E":c, "F":cn, "G":b, "H":n})
+`test = pd.DataFrame({"A": s, "B": td, "C": i, "D":f, "E":c, "F":cn, "G":b, "H":n})
 
 transformation of two features as categories
 
 test['E'] = test_03['E'].astype('category')
 
-test['F'] = test_03['F'].astype('category')
+test['F'] = test_03['F'].astype('category')`
 
 run infolib
 
-inf(test)
+`inf(test)`
 
 Development Status
 ------------------
