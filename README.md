@@ -83,4 +83,4 @@ and on Jupyter (py 3.10 on Windows)
 
    [Demo on Colab]: <https://colab.research.google.com/drive/1KTI7CwP_E7IJod_WiD0PT31MaRBdhiki?usp=sharing>
    [MIT]:<https://github.com/AntonelloManenti/infolib/blob/main/LICENSE>
-   [linkedin]:<https://github.com/AntonelloManenti/infolib/blob/main/LICENSE>
+   [linkedin]:<linkedin: https://www.linkedin.com/in/antonello-manenti/>
