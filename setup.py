@@ -1,11 +1,11 @@
 from setuptools import setup, find_packages
 
-with open("https://github.com/AntonelloManenti/infolib/blob/main/README.md", "r") as fh:
+with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setup(
         name="infolib",
-        version="0.1.14",
+        version="0.1.15",
         packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
         long_description=long_description,

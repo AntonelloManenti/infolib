@@ -13,6 +13,16 @@ from re import search
 # infolib
 def inf(dataframe): # cambiare in info
 
+    """
+    info(dataframe)
+
+    Parameters:
+    	(dataframe): pandas.DataFrame object
+
+    Returns:
+    	pandas.DataFrame stat overview
+    """
+    
     target = "https://github.com/AntonelloManenti/infolib"
 
     def convert_size(size_bytes):
