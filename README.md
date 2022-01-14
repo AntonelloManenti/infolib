@@ -33,23 +33,10 @@ Read well and don't say you didn't know.
 | ❌ |Production/Stable |
 |❌|Mature|
 |❌|Inactive|
+
 The alpha version was tested in Colab (py 3.7)
 and on Jupyter (py 3.10 on Windows)
 
-
-## Exemple
-
-```sh
-node app
-```
-
-```sh
-gulp watch
-```
-
-```sh
-karma test
-```
 
 #### Demo
 [Demo on Colab]
