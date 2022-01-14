@@ -1,29 +1,30 @@
-=======
 infolib
 =======
 
 *simple and complete PandasDataframe's stat overview*
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+|PyPI - Status| |Build Status| |PyPI - Downloads|
 
 Installation
-============
+------------
 
 Only through pip at this time https://test.pypi.org/project/infolib/
 
-.. code-block:: python
+.. code:: sh
 
    pip install -i https://test.pypi.org/simple/ infolib
 
-.. code-block:: python
+.. code:: sh
 
    from infolib.infolib import inf
 
 How to use
-==========
+----------
 
 Using infolib is very simple:
 
-.. code-block:: python
+.. code:: sh
 
    inf(pd.DataFarame)
 
@@ -32,7 +33,7 @@ inf() takes 1 positional argument and expects pandas DataFrame object
 Exemple
 -------
 
-.. code-block:: python
+.. code:: sh
 
    # series that will be part of the dataframe
    s = pd.Series(pd.date_range("2012-1-1", periods=3, freq="D"))
@@ -51,7 +52,7 @@ Exemple
    test['E'] = test_03['E'].astype('category')
    test['F'] = test_03['F'].astype('category')
 
-.. code-block:: python
+.. code:: sh
 
    # run infolib
    inf(test)
@@ -60,7 +61,7 @@ Exemple
    :alt: Infolib output
 
 Development Status
-==================
+------------------
 
 Read well and don't say you didn't know.
 
@@ -80,17 +81,17 @@ The alpha version was tested in Colab (py 3.7) and on Jupyter (py 3.10
 on Windows)
 
 Demo
-====
+^^^^
 
 `Demo on Colab`_
 
 License
-=======
+-------
 
 `MIT`_
 
 Contacts
-========
+--------
 
 `linkedin`_
 
