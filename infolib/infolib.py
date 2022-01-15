@@ -156,7 +156,7 @@ def inf(dataframe): # cambiare in info
                         a = round(dataframes[i].quantile(0.5),3)
                         Tot_desc_num['50%'].append(a)
 
-                        n = round(dataframes[i].quantile(0.75),3)
+                        a = round(dataframes[i].quantile(0.75),3)
                         Tot_desc_num['75%'].append(a)
 
                     else:
