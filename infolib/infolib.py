@@ -11,7 +11,7 @@ import re
 from re import search
 
 # infolib
-def inf(dataframe): # cambiare in info
+def info(dataframe): # cambiare in info
 
     """
     info(dataframe)
