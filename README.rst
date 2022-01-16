@@ -51,7 +51,7 @@ Read well and don't say you didn't know.
 
 ❌ Inactive
 
-The alpha version was tested in Colab (py 3.7) and on Jupyter (py 3.10
+The beta version (0.2.*) was tested in Colab (py 3.7) and on Jupyter (py 3.10
 on Windows)
 
 
