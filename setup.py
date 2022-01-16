@@ -11,7 +11,7 @@ else:
 
 setup(
         name="infolib",
-        version="0.2.16",
+        version="0.2.17",
         packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
         long_description=long_description,
@@ -40,14 +40,6 @@ setup(
             "Topic :: Scientific/Engineering",
         ],
         install_requires=[
-            "numpy",
-            "pandas",
-            "ipython",
-            "more-itertools",
-            "psutil",
-            "regex",
-            ],
-        requires_by=[
             "numpy",
             "pandas",
             "ipython",
