@@ -11,7 +11,7 @@ else:
 
 setup(
         name="infolib",
-        version="0.2.1",
+        version="0.2.2",
         packages=find_packages(),
         description="A small, simple and sturdy library to overview our PandasDataframe",
         long_description=long_description,
@@ -47,8 +47,6 @@ setup(
             "psutil",
             "regex",
             ],
-        package_dir={"": "src"},
-        packages=setuptools.find_packages(where="src"),
         python_requires='>3.6',
         entry_points="""
         [console_scripts]
