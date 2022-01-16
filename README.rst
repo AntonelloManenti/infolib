@@ -2,6 +2,7 @@ infolib
 =======
 
 *simple and complete PandasDataframe's stat overview*
+.. image:: https://img.shields.io/pypi/v/infolib   :alt: PyPI
 
 Installation
 ------------
