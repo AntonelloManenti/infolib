@@ -12,15 +12,15 @@ https://pypi.org/project/infolib/
 pip install infolib
 ```
 ```sh
-from infolib.infolib import inf
+from infolib import info
 ```
 ## How to use
 
 Using infolib is very simple:
 ```sh
-inf(pd.DataFarame)
+info(pd.DataFarame)
 ```
-inf() takes 1 positional argument and expects pandas DataFrame object
+info() takes 1 positional argument and expects pandas DataFrame object
 
 ## Exemple
 
@@ -45,24 +45,13 @@ test['F'] = test_03['F'].astype('category')
 
 ```sh
 # run infolib
-inf(test)
+info(test)
 ```
 
 ![Infolib output](https://raw.githubusercontent.com/AntonelloManenti/infolib/main/tests/output_infolib.PNG)
 
 ## Development Status
-
-Read well and don't say you didn't know.
-
-|| Status|
-| ------ |------ |
-| ✔️| Planning|
-| ✔️| Pre-Alpha|
-| ✔️| Alpha|
-| ❌|Beta
-| ❌ |Production/Stable |
-|❌|Mature|
-|❌|Inactive|
+![PyPI](https://img.shields.io/pypi/v/infolib)
 
 The alpha version was tested in Colab (py 3.7)
 and on Jupyter (py 3.10 on Windows)
