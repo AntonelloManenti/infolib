@@ -1,6 +1,6 @@
 # infolib
 #### _simple and complete PandasDataframe's stat overview_
-![PyPI - Status](https://img.shields.io/pypi/status/infolib) ![Build Status](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) ![PyPI - Version](![PyPI](https://img.shields.io/pypi/v/infolib))
+![PyPI - Status](https://img.shields.io/pypi/status/infolib) ![Build Status](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) ![PyPI - Version](![PyPI](https://img.shields.io/pypi/v/infolib)
 
 ## Installation
 
