@@ -43,7 +43,7 @@ Read well and don't say you didn't know.
 
 ✔️ Alpha
 
-❌ Beta
+✔️ Beta
 
 ❌ Production/Stable
 
