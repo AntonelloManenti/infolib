@@ -6,7 +6,7 @@ infolib
 Installation
 ------------
 
-Only through pip at this time https://test.pypi.org/project/infolib/
+Only through pip at this time https://pypi.org/project/infolib/
 
 `pip install infolib`
 
