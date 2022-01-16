@@ -50,16 +50,14 @@ info(test)
 
 ![Infolib output](https://raw.githubusercontent.com/AntonelloManenti/infolib/main/tests/output_infolib.PNG)
 
+#### Demo
+[Demo on Colab]
+
 ## Development Status
 ![PyPI](https://img.shields.io/pypi/v/infolib)
 
 The alpha version was tested in Colab (py 3.7)
 and on Jupyter (py 3.10 on Windows)
-
-
-#### Demo
-[Demo on Colab]
-
 
 ## License
 
