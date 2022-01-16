@@ -8,9 +8,9 @@ Installation
 
 Only through pip at this time https://test.pypi.org/project/infolib/
 
-`pip install -i https://test.pypi.org/simple/ infolib`
+`pip install infolib`
 
-`from infolib.infolib import inf`
+`from infolib import info`
 
 How to use
 ----------
@@ -18,45 +18,19 @@ How to use
 Using infolib is very simple:
 
 
-`inf(pd.DataFarame)`
+`info(pd.DataFarame)`
 
 inf() takes 1 positional argument and expects pandas DataFrame object
 
 Exemple
 -------
 
-series that will be part of the dataframe
+Demo on Colab: https://colab.research.google.com/drive/1KTI7CwP_E7IJod_WiD0PT31MaRBdhiki?usp=sharing
 
-`s = pd.Series(pd.date_range("2012-1-1", periods=3, freq="D"))`
+Code
+----
 
-`td = pd.Series([pd.Timedelta(days=i) for i in range(3)])`
-
-`i = [1,2,3]`
-
-`f = [0.123,423.231,0.002]`
-
-`c = ['A', 'B', 'C']`
-
-`cn = [1, 2, 3]`
-
-`b = [False, True, False]`
-
-`n = [np.nan, np.nan, np.nan]`
-
-
-import as pandas.Dataframe
-
-`test = pd.DataFrame({"A": s, "B": td, "C": i, "D":f, "E":c, "F":cn, "G":b, "H":n})`
-
-transformation of two features as categories
-
-`test['E'] = test_03['E'].astype('category')`
-
-`test['F'] = test_03['F'].astype('category')`
-
-run infolib
-
-`inf(test)`
+GitHub: https://github.com/AntonelloManenti/infolib
 
 Development Status
 ------------------
@@ -80,10 +54,6 @@ Read well and don't say you didn't know.
 The alpha version was tested in Colab (py 3.7) and on Jupyter (py 3.10
 on Windows)
 
-Demo
-----
-
-Demo on Colab: https://colab.research.google.com/drive/1KTI7CwP_E7IJod_WiD0PT31MaRBdhiki?usp=sharing
 
 License
 -------
