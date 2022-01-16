@@ -1,1 +1,1 @@
-from .infolib import inf
+from .infolib import info
