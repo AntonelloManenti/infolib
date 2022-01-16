@@ -5,10 +5,11 @@
 ## Installation
 
 Only through pip at this time
-https://test.pypi.org/project/infolib/
+https://pypi.org/project/infolib/
+
 
 ```sh
-pip install -i https://test.pypi.org/simple/ infolib
+pip install infolib
 ```
 ```sh
 from infolib.infolib import inf
