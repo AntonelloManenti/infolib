@@ -63,8 +63,7 @@ and on Jupyter (py 3.10 on Windows)
 [![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AntonelloManenti/infolib/blob/main/LICENSE)
 
 ## Contacts
-
-[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/antonello-manenti/)
+[![Linkedin](https://img.shields.io/badge/LinkedIn-gray?style=flat&logo=linkedin&labelColor=blue)](https://www.linkedin.com/in/antonello-manenti/)
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
