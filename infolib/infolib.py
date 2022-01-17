@@ -45,12 +45,12 @@ def info(dataframe): # cambiare in info
         return
 
     if isinstance(dataframe, pd.DataFrame)==False:
-        print(f"This function expects PandasDataframe argument.\n{type(dataframe)} is not a valid argument.\n\nFor more info about inf() visit {target}")
+        print(f"This function expects PandasDataframe argument.\n{type(dataframe)} is not a valid argument.\n\nFor more info about info() visit {target}")
 
     else:
         if dataframe.empty==True:
             display_side_by_side(dataframe, titles=[f"Warning! Your PandasDataframe is empty"])
-            print(f'\n\nFor more info about inf.inf() visit {target}')
+            print(f"\n\nFor more info about info() visit {target}"")
         else:
             try:
                 Df_desc = {'dataset': [], 'columns': [], 'rows': [], 'rows_whitout_NaN': [], 'rows_whit_NaN':[], 'rows_duplicate':[],
@@ -85,7 +85,7 @@ def info(dataframe): # cambiare in info
                                 dataframes.drop(i, axis=1, inplace=True)
 
                 except Exception as e:
-                    print(f'Maybe there are one or more columns named level_ *. You need to change the name of those columns\n\nFor more info about inf() visit {target}')
+                    print(f'Maybe there are one or more columns named level_ *. You need to change the name of those columns.\n\nFor more info about info() visit {target}')
                     print(repr(e))
 
                 i = len(dataframes.columns)
@@ -220,6 +220,6 @@ def info(dataframe): # cambiare in info
 
             except Exception as e:
                 print(repr(e))
-                print(f'For more info about inf() visit {target}')
+                print(f'For more info about info() visit {target}')
 
     return
