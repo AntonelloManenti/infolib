@@ -51,24 +51,22 @@ info(test)
 ![Infolib output](https://raw.githubusercontent.com/AntonelloManenti/infolib/main/tests/output_infolib.PNG)
 
 #### Demo
-[Demo on Colab]
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KTI7CwP_E7IJod_WiD0PT31MaRBdhiki?usp=sharing)
+
 
 ## Development Status
-![PyPI](https://img.shields.io/pypi/v/infolib)
 
 The beta version (0.2.*) was tested in Colab (py 3.7)
 and on Jupyter (py 3.10 on Windows)
 
 ## License
-
-[MIT]
+[![License](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/AntonelloManenti/infolib/blob/main/LICENSE)
 
 ## Contacts
 
-[linkedin]
+[![linkedin](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/antonello-manenti/)
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
-   [Demo on Colab]: <https://colab.research.google.com/drive/1KTI7CwP_E7IJod_WiD0PT31MaRBdhiki?usp=sharing>
-   [MIT]:<https://github.com/AntonelloManenti/infolib/blob/main/LICENSE>
+   [License]:<https://github.com/AntonelloManenti/infolib/blob/main/LICENSE>
    [linkedin]:<https://www.linkedin.com/in/antonello-manenti/>
