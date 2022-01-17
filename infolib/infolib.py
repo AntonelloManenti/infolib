@@ -50,7 +50,7 @@ def info(dataframe): # cambiare in info
     else:
         if dataframe.empty==True:
             display_side_by_side(dataframe, titles=[f"Warning! Your PandasDataframe is empty"])
-            print(f"\n\nFor more info about info() visit {target}"")
+            print(f"\n\nFor more info about info() visit {target}")
         else:
             try:
                 Df_desc = {'dataset': [], 'columns': [], 'rows': [], 'rows_whitout_NaN': [], 'rows_whit_NaN':[], 'rows_duplicate':[],
