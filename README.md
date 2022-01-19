@@ -8,6 +8,8 @@
 Only through pip at this time
 https://pypi.org/project/infolib/
 
+[![PyPi](https://img.shields.io/badge/PyPi-repository?style=flat&logo=pypi&logoColor=white&labelColor=blue&color=gray)](https://pypi.org/project/infolib/)
+
 
 ```sh
 pip install infolib
