@@ -2,6 +2,7 @@
 #### _simple and complete PandasDataframe's stat overview_
 ![PyPI - Status](https://img.shields.io/pypi/status/infolib) ![Build Status](https://img.shields.io/badge/python-3.7%20%7C%203.8%20%7C%203.9%20%7C%203.10-blue) ![PyPI](https://img.shields.io/pypi/v/infolib)
 
+
 ## Installation
 
 Only through pip at this time
@@ -64,6 +65,7 @@ and on Jupyter (py 3.10 on Windows)
 
 ## Contacts
 [![Linkedin](https://img.shields.io/badge/LinkedIn-gray?style=flat&logo=linkedin&labelColor=blue)](https://www.linkedin.com/in/antonello-manenti/)
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=flat&logo=gmail&logoColor=white&labelColor=red&color=gray)](mailto:antonellomanenti@gmail.com)
 
 [//]: # (These are reference links used in the body of this note and get stripped out when the markdown processor does its job. There is no need to format nicely because it shouldn't be seen. Thanks SO - http://stackoverflow.com/questions/4823468/store-comments-in-markdown-syntax)
 
