@@ -17,7 +17,7 @@ drive.mount('/content/drive')
 import seaborn as sns
 from matplotlib import pyplot as plt
 import math
-import os
+# import os
 import glob
 import warnings
 warnings.filterwarnings('ignore')
@@ -82,7 +82,7 @@ def infolib(dataframe, series=None):
   def get_df_name(dataframe):
     name =[x for x in globals() if globals()[x] is dataframe][0]
     return name
-  
+
   def display_side_by_side(*args,titles=cycle([''])):
     html_str=''
     for df,title in zip(args, chain(titles,cycle(['</br>'])) ):
@@ -108,19 +108,19 @@ def infolib(dataframe, series=None):
 
           a=len(dataframe.columns)
           Df_desc['columns'].append(a)
-          
+
           b=len(dataframe.index)
           Df_desc['rows'].append(b)
-          
+
           c=len(dataframe.index)-len(dataframe.drop_duplicates())
           Df_desc['row_duplicate'].append(c)
-          
+
           c=len(dataframe.index)-(len(dataframe.index)-len(dataframe.drop_duplicates()))
           Df_desc['row_unique'].append(c)
-          
+
           d = len(dataframe.index)-dataframe.isna().sum().sum()
           Df_desc['row_whitout_NaN'].append(d)
-          
+
           e = dataframe.isna().sum().sum()
           Df_desc['row_whit_NaN'].append(e)
 
@@ -136,64 +136,64 @@ def infolib(dataframe, series=None):
                       'mean':[], 'std':[], 'min':[], 'max':[], '25%':[], '50%':[], '75%':[]}
           Tot_desc_cat = {'feature_name': [], 'dtypes': [], 'count_not_NaN': [], 'count_NaN': [], 'unique':[],
                       'top':[], 'freq':[]}
-            
+
           for i in dataframe.columns:
             a=dataframe[i].dtypes
-            
+
             if (a == int) or (a == float):
               Tot_desc_num['feature_name'].append(i)
-              
+
               a=dataframe[i].dtypes
               Tot_desc_num['dtypes'].append(a)
-              
+
               b=dataframe[i].count()
               Tot_desc_num['count_not_NaN'].append(b)
-              
+
               c=dataframe[i].isna().sum()
               Tot_desc_num['count_NaN'].append(c)
-              
+
               d = dataframe[i].nunique()
               Tot_desc_num['unique'].append(d)
-              
+
               e=round(dataframe[i].mean(),3)
               Tot_desc_num['mean'].append(e)
-              
+
               f=round(dataframe[i].std(),3)
               Tot_desc_num['std'].append(f)
-              
+
               g=round(dataframe[i].min(),3)
               Tot_desc_num['min'].append(g)
-              
+
               h=round(dataframe[i].max(),3)
               Tot_desc_num['max'].append(h)
-              
+
               l=round(dataframe[i].quantile(0.25),3)
               Tot_desc_num['25%'].append(l)
-              
+
               m=round(dataframe[i].quantile(0.5),3)
               Tot_desc_num['50%'].append(m)
-              
+
               n=round(dataframe[i].quantile(0.75),3)
               Tot_desc_num['75%'].append(n)
 
             else:
               Tot_desc_cat['feature_name'].append(i)
-              
+
               a=dataframe[i].dtypes
               Tot_desc_cat['dtypes'].append(a)
-              
+
               b=dataframe[i].count()
               Tot_desc_cat['count_not_NaN'].append(b)
-              
+
               c=dataframe[i].isna().sum()
               Tot_desc_cat['count_NaN'].append(c)
-              
+
               d = dataframe[i].nunique()
               Tot_desc_cat['unique'].append(d)
-              
+
               o=dataframe[i].value_counts().idxmax()
               Tot_desc_cat['top'].append(o)
-              
+
               p=dataframe[i].value_counts()
               q=p.iloc[0]
               Tot_desc_cat['freq'].append(q)
@@ -203,9 +203,9 @@ def infolib(dataframe, series=None):
           Numerical_Features.index.name = None
 
           Categorical_Features=pd.DataFrame.from_dict(Tot_desc_cat, orient='columns')
-          Categorical_Features=Categorical_Features.set_index('feature_name')     
+          Categorical_Features=Categorical_Features.set_index('feature_name')
           Categorical_Features.index.name = None
-          
+
           if not DataFrames.empty:
             if not Numerical_Features.empty:
               if not Categorical_Features.empty:
@@ -222,33 +222,33 @@ def infolib(dataframe, series=None):
                 display_side_by_side(DataFrames, Categorical_Features, titles=['DataFrame', 'Categorical Features'])
 
       except:
-      
+
         print(f'Error in your PandasDataframe')
         print(e)
-    
+
     else:
       if isinstance(dataframe, pd.DataFrame)==True and isinstance(series, str)==True:
         var_desc_num = {'feature_name': [], 'dtypes': [], 'count': [], 'unique': [], 'NaN':[],
                       'mean':[], 'mode':[],'median':[], 'std':[], 'min':[], 'max':[], 'sample':[]}
         var_desc_cat = {'feature_name': [], 'dtypes': [], 'count_not_NaN': [], 'count_NaN': [], 'unique':[],
                       'top':[], 'freq':[],'sample':[]}
-        a=dataframe[series].dtypes    
+        a=dataframe[series].dtypes
         if (a == int) or (a == float): # num
           try:
             print(f'Qui numeriche')
             var_desc_num['feature_name'].append(series)
 
             var_desc_num['dtypes'].append(a)
-            
+
             b=dataframe[series].count()
             var_desc_num['count'].append(b)
-            
+
             c=dataframe[series].isna().sum()
             var_desc_num['NaN'].append(c)
-            
+
             d = dataframe[series].nunique()
             var_desc_num['unique'].append(d)
-            
+
             e=round(dataframe[series].mean(),3)
             var_desc_num['mean'].append(e)
 
@@ -257,26 +257,26 @@ def infolib(dataframe, series=None):
 
             e=dataframe[series].median()
             var_desc_num['median'].append(e)
-            
+
             f=round(dataframe[series].std(),3)
             var_desc_num['std'].append(f)
-            
+
             g=round(dataframe[series].min(),3)
             var_desc_num['min'].append(g)
-            
+
             h=round(dataframe[series].max(),3)
             var_desc_num['max'].append(h)
-            
+
             l=dataframe[series].sample(1)[0]
             var_desc_num['sample'].append(l)
-            
+
 
 
 
 
 
             var_desc_num=pd.DataFrame.from_dict(var_desc_num, orient='columns')
-            var_desc_num=var_desc_num.set_index('feature_name')     
+            var_desc_num=var_desc_num.set_index('feature_name')
             var_desc_num.index.name = None
             display_side_by_side(var_desc_num, titles=[f'Feature Num.'])
 
@@ -302,30 +302,30 @@ def infolib(dataframe, series=None):
             plt.show()
 
 
-            
+
 
           except:
             print(f'Series is not in columns è dataframe giusto e series stringa ma non è una colonna del df')
             print(e)
-        
+
         else: # cat
-          
+
           try:
             print('qui categoriche')
 
             var_desc_cat['feature_name'].append(series)
 
             var_desc_cat['dtypes'].append(a)
-            
+
             b=dataframe[series].count()
             var_desc_cat['count_not_NaN'].append(b)
-            
+
             c=dataframe[series].isna().sum()
             var_desc_cat['count_NaN'].append(c)
-            
+
             d = dataframe[series].nunique()
             var_desc_cat['unique'].append(d)
-            
+
             e=dataframe[series].value_counts().idxmax()
             var_desc_cat['top'].append(e)
 
@@ -335,11 +335,11 @@ def infolib(dataframe, series=None):
 
             e=dataframe[series].sample(1)[0]
             var_desc_cat['sample'].append(e)
-            
+
 
 
             var_desc_cat=pd.DataFrame.from_dict(var_desc_cat, orient='columns')
-            var_desc_cat=var_desc_cat.set_index('feature_name')     
+            var_desc_cat=var_desc_cat.set_index('feature_name')
             var_desc_cat.index.name = None
             display_side_by_side(var_desc_cat, titles=[f'Feature cat.'])
 
@@ -367,10 +367,10 @@ def infolib(dataframe, series=None):
           except:
             print(f'Series is not in columns è dataframe giusto e series stringa ma non è una colonna del df')
             print(e)
-     
-     
-     
-     
+
+
+
+
       else:
           print(f'Errore dataframe true ma str non è una stringa')
 
