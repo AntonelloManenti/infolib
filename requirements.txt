@@ -33,7 +33,7 @@ Jinja2==3.0.3
 json5==0.9.6
 jsonschema==4.3.3
 jupyter-client==7.1.0
-jupyter-core==4.9.1
+jupyter-core>=4.11.2
 jupyter-server==1.13.1
 jupyterlab==3.2.6
 jupyterlab-pygments==0.1.2
